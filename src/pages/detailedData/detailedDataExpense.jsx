@@ -299,7 +299,7 @@ const DetailedDataExpense = () => {
 
     return (
         <>
-            <div className="container-fluid">
+            <div className="container-fluid text-dark">
                 <div className='d-flex justify-content-between align-items-center'>
                     <button className="btn btn-primary" onClick={() => navigate('/')}>&lt; Back</button>
 
