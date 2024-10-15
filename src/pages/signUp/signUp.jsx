@@ -132,7 +132,7 @@ const SignUp = () => {
                 <button onClick={handleGoogleSignIn} className='border border-dark rounded-circle d-flex justify-content-center align-items-center p-3 '><FaGoogle /></button>
             </div>
             <div className='w-75 d-flex justify-content-center align-items-center'>
-                <p>Already have an account? <a href="/login" onClick={() => navigate('/login')}>Login</a></p>
+                <p>Already have an account? <p onClick={() => navigate('/login')}>Login</p></p>
             </div>
 
         </div>
