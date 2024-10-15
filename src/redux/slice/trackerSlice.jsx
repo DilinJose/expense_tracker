@@ -37,9 +37,13 @@ const TrackerSlice = createSlice({
 
             }
         },
+        removeExpenses: (state) => {
+            state.expenses = []
+            state.income = []
+        }
 
     }
 })
 
-export const { setExpense } = TrackerSlice.actions;
+export const { setExpense ,removeExpenses} = TrackerSlice.actions;
 export default TrackerSlice.reducer

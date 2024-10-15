@@ -2,14 +2,30 @@ import { useContext } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { AuthContext } from "../../../context/AuthContext"
 import logo from "../../../assets/react.svg"
+import { useDispatch } from "react-redux"
+import { removeExpenses } from "../../../redux/slice/trackerSlice"
+import { signOut } from "firebase/auth"
+import { auth } from "../../../firebase/firebase"
 
 const Header = () => {
-    const navigate = useNavigate()
-    const { currentUser } = useContext(AuthContext)
+    const dispatch1 = useDispatch()
+    const { currentUser, dispatch } = useContext(AuthContext);
+    const navigate = useNavigate();
+
+
     const handleSignout = () => {
-        localStorage.removeItem("user")
-        navigate('/login')
-    }
+            signOut(auth)
+                .then(() => {
+                    localStorage.clear();  
+                    dispatch({ type: "SIGN_OUT" });  
+                    dispatch1(removeExpenses());  
+                    navigate('/login'); 
+                })
+                .catch((error) => {
+                    console.error('Error during sign-out:', error);
+                });
+    }; 
+    
     return (
         <div>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
