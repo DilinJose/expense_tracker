@@ -14,18 +14,18 @@ const Header = () => {
 
 
     const handleSignout = () => {
-            signOut(auth)
-                .then(() => {
-                    localStorage.clear();  
-                    dispatch({ type: "SIGN_OUT" });  
-                    dispatch1(removeExpenses());  
-                    navigate('/login'); 
-                })
-                .catch((error) => {
-                    console.error('Error during sign-out:', error);
-                });
-    }; 
-    
+        signOut(auth)
+            .then(() => {
+                localStorage.clear();
+                dispatch({ type: "SIGN_OUT" });
+                dispatch1(removeExpenses());
+                navigate('/login');
+            })
+            .catch((error) => {
+                console.error('Error during sign-out:', error);
+            });
+    };
+
     return (
         <div>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -41,7 +41,7 @@ const Header = () => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                        {currentUser && <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
                                 <Link className="text-decoration-none text-dark mx-2" to='/'>
                                     Dashboard
@@ -57,7 +57,7 @@ const Header = () => {
                                 </Link>
 
                             </li>
-                        </ul>
+                        </ul>}
                         <div className="d-flex justify-content-center align-items-center">
                             <p className="m-0">{currentUser?.displayName || ""}</p>
                             {
