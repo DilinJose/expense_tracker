@@ -59,11 +59,9 @@ const Header = () => {
                             </li>
                         </ul>
                         <div className="d-flex justify-content-center align-items-center">
-                            <p className="m-0">{currentUser?.displayName || "User"}</p>
+                            <p className="m-0">{currentUser?.displayName || ""}</p>
                             {
-                                !currentUser ?
-                                    <button type="button" className="btn btn-outline-primary m-1">Login/Register</button>
-                                    : <button type="button" className="btn btn-outline-danger m-1" onClick={() => handleSignout()}>SignOut</button>
+                                currentUser && <button type="button" className="btn btn-outline-danger m-1" onClick={() => handleSignout()}>SignOut</button>
                             }
 
                         </div>

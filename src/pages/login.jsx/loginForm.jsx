@@ -116,7 +116,7 @@ const LoginForm = () => {
       </div>
 
       <div className='w-75 d-flex justify-content-center align-items-center' style={{ curser: 'pointer' }}>
-        <p>Donot have an account? <button className='btn btn-light' onClick={() => navigate('/signup')}>Sign Up</button></p>
+        <p>Donot have an account? <span className='' style={{textDecoration:"underline",color:"blue"}} onClick={() => navigate('/signup')}>Sign Up</span></p>
       </div>
 
 

@@ -299,46 +299,40 @@ const DetailedDataExpense = () => {
 
     return (
         <>
-            {expenses.length || income.length ?
-                <div className="container-fluid">
-                    <div className='d-flex justify-content-between align-items-center'>
-                        <button className="btn btn-primary" onClick={() => navigate('/')}>&lt; Back</button>
+            <div className="container-fluid">
+                <div className='d-flex justify-content-between align-items-center'>
+                    <button className="btn btn-primary" onClick={() => navigate('/')}>&lt; Back</button>
 
-                    </div>
-                    <div className='p-3'>
-                        <div className='ms-5 mb-2 d-flex flex-column justify-content-between align-items-start'>
-                            <div className='border border-gray rounded-pill px-4 py-2'>
-
-                                <div className="" onClick={() => showPopUp(!popUp)}>
-                                    <IoFilterOutline />
-                                    <select className="border-0" onChange={(e) => { setType(e.target.value) }}>
-                                        <option value=''>Filter</option>
-                                        <option value='date'>Date</option>
-                                        <option value='week'>Week</option>
-                                        <option value='month'>Month</option>
-                                    </select>
-                                </div>
-                            </div>
-                            {
-                                renderCalender(type)
-                            }
-                        </div>
-                        <div className='container-fluid shadow-sm bg-body rounded text-center border border-grey rounded '>
-                            <h3 className='text-center'>Incomes</h3>
-                            {incomeData && <TableComponent tableData={incomeData?.map((data, index) => ({ index: index + 1, ...data }))} columns={incomeColumns} />}
-                        </div>
-                        <div className='mb-4 container-fluid shadow-sm bg-body rounded text-center border border-grey rounded '>
-                            <h3 className='text-center'>Expenses</h3>
-                            {expenseData && <TableComponent tableData={expenseData?.map((data, index) => ({ index: index + 1, ...data }))} columns={expensesColumns} />}
-                        </div>
-
-                    </div>
-                </div> : <div className="d-flex justify-content-center align-items-center mt-5">
-                    <div className="spinner-border text-secondary" role="status">
-                        <span className="sr-only"></span>
-                    </div>
                 </div>
-            }
+                <div className='p-3'>
+                    <div className='ms-5 mb-2 d-flex flex-column justify-content-between align-items-start'>
+                        <div className='border border-gray rounded-pill px-4 py-2'>
+
+                            <div className="" onClick={() => showPopUp(!popUp)}>
+                                <IoFilterOutline />
+                                <select className="border-0" onChange={(e) => { setType(e.target.value) }}>
+                                    <option value=''>Filter</option>
+                                    <option value='date'>Date</option>
+                                    <option value='week'>Week</option>
+                                    <option value='month'>Month</option>
+                                </select>
+                            </div>
+                        </div>
+                        {
+                            renderCalender(type)
+                        }
+                    </div>
+                    <div className='container-fluid shadow-sm bg-body rounded text-center border border-grey rounded '>
+                        <h3 className='text-center'>Incomes</h3>
+                        {incomeData && <TableComponent tableData={incomeData?.map((data, index) => ({ index: index + 1, ...data }))} columns={incomeColumns} />}
+                    </div>
+                    <div className='mb-4 container-fluid shadow-sm bg-body rounded text-center border border-grey rounded '>
+                        <h3 className='text-center'>Expenses</h3>
+                        {expenseData && <TableComponent tableData={expenseData?.map((data, index) => ({ index: index + 1, ...data }))} columns={expensesColumns} />}
+                    </div>
+
+                </div>
+            </div>
         </>
     )
 }
