@@ -47,9 +47,11 @@ const styles = {
   },
   expenseType: {
     fontWeight: 'bold',
+    color: '#1B2F33',
+
   },
   expenseAmount: {
-    color: '#555',
+    color: '#1B2F33',
   },
   totalContainer: {
     display: 'flex',

@@ -322,11 +322,11 @@ const DetailedDataExpense = () => {
                             renderCalender(type)
                         }
                     </div>
-                    <div className='container-fluid shadow-sm bg-body rounded text-center border border-grey rounded '>
+                    <div className='m-2 container-fluid shadow-sm  rounded text-center border border-grey rounded '>
                         <h3 className='text-center'>Incomes</h3>
                         {incomeData && <TableComponent tableData={incomeData?.map((data, index) => ({ index: index + 1, ...data }))} columns={incomeColumns} />}
                     </div>
-                    <div className='mb-4 container-fluid shadow-sm bg-body rounded text-center border border-grey rounded '>
+                    <div className='m-2 container-fluid shadow-sm rounded text-center border border-grey rounded '>
                         <h3 className='text-center'>Expenses</h3>
                         {expenseData && <TableComponent tableData={expenseData?.map((data, index) => ({ index: index + 1, ...data }))} columns={expensesColumns} />}
                     </div>

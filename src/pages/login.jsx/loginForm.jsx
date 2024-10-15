@@ -60,7 +60,7 @@ const LoginForm = () => {
   })
 
   return (
-    <div style={{ height: '70vh' }} className='mt-5 d-flex justify-content-center align-items-center flex-column border border-light rounded bg-light col-xxl-6 col-xl-6  col-lg-12 col-sm-12 col-xs-12 container mt-4 bg-light'>
+    <div style={{ height: '70vh' }} className='mt-5 d-flex justify-content-center align-items-center flex-column border border-light rounded col-xxl-6 col-xl-6  col-lg-12 col-sm-12 col-xs-12 container mt-4'>
       <div className='w-50 text-center'>
         <h2>Login In</h2>
       </div>

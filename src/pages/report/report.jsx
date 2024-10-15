@@ -95,7 +95,7 @@ const Report = () => {
                     </div>
                     <div className="m-3">
                         {
-                            aiResp && <pre className="container-fluid shadow-sm p-3 mb-5 bg-body rounded text-center w-100 border border-grey rounded  ">{aiResp}</pre>
+                            aiResp && <pre className="container-fluid shadow-sm p-3 mb-5 rounded text-center w-100 border border-grey rounded  ">{aiResp}</pre>
                         }
                     </div>
                 </div>

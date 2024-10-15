@@ -6,9 +6,9 @@ const TotalIncome = ({ data }) => {
     return (
         <div style={styles.container}>
             <h2 style={styles.header}>Income Summary</h2>
-            <div style={styles.expenseList}>
+            <div style={styles.incomeList}>
                 {data.length > 0 && data.map((item, index) => (
-                    <div key={index} style={styles.expenseItem}>
+                    <div key={index} style={styles.incomeItem}>
                         <span style={styles.incomeType}>{item.incomeType}:</span>
                         <span style={styles.incomeAmount}>{item.incomeAmount}</span>
                     </div>
@@ -38,19 +38,20 @@ const styles = {
         textAlign: 'center',
         marginBottom: '20px',
     },
-    expenseList: {
+    incomeList: {
         marginBottom: '20px',
     },
-    expenseItem: {
+    incomeItem: {
         display: 'flex',
         justifyContent: 'space-between',
         padding: '5px 0',
     },
-    expenseType: {
+    incomeType: {
         fontWeight: 'bold',
+        color: '#1B2F33',
     },
-    expenseAmount: {
-        color: '#555',
+    incomeAmount: {
+        color: '#1B2F33',
     },
     totalContainer: {
         display: 'flex',

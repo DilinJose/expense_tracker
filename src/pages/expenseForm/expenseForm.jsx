@@ -91,7 +91,7 @@ const ExpenseForm = () => {
                 onSubmit={handleSubmit}
             >
                 {({ isSubmitting, setFieldValue }) => (
-                    <Form className="container mt-4 border-dark bg-light d-flex justify-content-center align-items-center w-50 p-3 rounded">
+                    <Form className="container mt-4 border-dark d-flex justify-content-center align-items-center w-50 p-3 rounded">
                         <div>
                             <h1 className='text-center'>Transaction Form</h1>
                             <div className="mb-3">
