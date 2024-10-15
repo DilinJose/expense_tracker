@@ -131,7 +131,7 @@ const SignUp = () => {
             <div className='w-75 d-flex justify-content-center align-items-center m-3'>
                 <button onClick={handleGoogleSignIn} className='border border-dark rounded-circle d-flex justify-content-center align-items-center p-3 '><FaGoogle style={{color:'red'}} /></button>
             </div>
-            <div className='w-75 d-flex justify-content-center align-items-center'>
+            <div className='w-75 d-flex justify-content-center align-items-center' style={{curser:'pointer'}}>
                 <p>Already have an account? <span onClick={() => navigate('/login')}>Login</span></p>
             </div>
 
