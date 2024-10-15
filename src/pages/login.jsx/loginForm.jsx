@@ -60,36 +60,12 @@ const LoginForm = () => {
   })
 
   return (
-    <div style={{ height: '70vh' }} className='mt-5 d-flex justify-content-center align-items-center flex-column border border-light rounded bg-light w-100 container mt-4 bg-light'>
+    <div style={{ height: '70vh' }} className='mt-5 d-flex justify-content-center align-items-center flex-column border border-light rounded bg-light w-50 container mt-4 bg-light'>
       <div className='w-50 text-center'>
         <h2>Login In</h2>
       </div>
 
       <div className='w-50 d-flex justify-content-center align-items-center'>
-        {/* <form onSubmit={handleEmailSignUp} className='d-flex  flex-column w-100'>
-
-          <input
-            className='form-control m-2'
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <input
-            className='form-control m-2'
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          {error && <p className='text-center text-danger'>Wrong email or password</p>}
-
-
-          <button className="btn btn-primary m-2" type="submit">Login</button>
-        </form> */}
-
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
@@ -102,12 +78,12 @@ const LoginForm = () => {
 
                 <div className="mb-3">
                   <label htmlFor="email" className="form-label">Email</label>
-                  <Field name="email" type="email" className="form-control" />
+                  <Field name="email" type="email" className="form-control" placeholder="Enter your email"/>
                   <ErrorMessage name="email" component="div" className="text-danger" />
                 </div>
                 <div className="mb-3">
                   <label htmlFor="password" className="form-label">Password</label>
-                  <Field name="password" type="password" className="form-control" />
+                  <Field name="password" type="password" className="form-control" placeholder="Enter your password"/>
                   <ErrorMessage name="password" component="div" className="text-danger" />
                 </div>
                 {error && <p className='text-center text-danger'>Wrong email or password</p>}
@@ -119,20 +95,17 @@ const LoginForm = () => {
                     {isSubmitting ? 'Logging in...' : 'LogIn'}
                   </button>
                 </div>
-
-
               </div>
-
             </Form>
           )}
         </Formik>
 
       </div>
       <div className='w-75 d-flex justify-content-center align-items-center m-3'>
-        <button onClick={handleGoogleSignIn} className='border border-dark rounded-circle d-flex justify-content-center align-items-center p-3 '><FaGoogle /></button>
+        <button onClick={handleGoogleSignIn} className='border border-dark rounded-circle d-flex justify-content-center align-items-center p-3 '><FaGoogle style={{color:'red'}}/></button>
       </div>
       <div className='w-75 d-flex justify-content-center align-items-center'>
-        <p>Donot have an account? <p onClick={() => navigate('/signup')}>Sign Up</p></p>
+        <p>Donot have an account? <span onClick={() => navigate('/signup')}>Sign Up</span></p>
       </div>
 
 

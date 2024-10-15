@@ -89,24 +89,24 @@ const SignUp = () => {
                             <div className='w-50'>
                                 <div className="mb-3 w-100">
                                     <label htmlFor="fullName" className="form-label">Full Name</label>
-                                    <Field name="fullName" type="text" className="form-control" />
+                                    <Field name="fullName" type="text" className="form-control" placeholder="Enter Full name"/>
                                     <ErrorMessage name="fullName" component="div" className="text-danger" />
                                 </div>
 
                                 <div className="mb-3">
                                     <label htmlFor="email" className="form-label">Email</label>
-                                    <Field name="email" type="email" className="form-control" />
+                                    <Field name="email" type="email" className="form-control" placeholder="Enter your email"/>
                                     <ErrorMessage name="email" component="div" className="text-danger" />
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="password" className="form-label">Password</label>
-                                    <Field name="password" type="password" className="form-control" />
+                                    <Field name="password" type="password" className="form-control" placeholder="Enter your password"/>
                                     <ErrorMessage name="password" component="div" className="text-danger" />
                                 </div>
 
                                 <div className="mb-3">
                                     <label htmlFor="job" className="form-label">Job</label>
-                                    <Field name="job" type="text" className="form-control" />
+                                    <Field name="job" type="text" className="form-control" placeholder="Enter your job description"/>
                                     <ErrorMessage name="job" component="div" className="text-danger" />
                                 </div>
 
@@ -129,10 +129,10 @@ const SignUp = () => {
 
             </div>
             <div className='w-75 d-flex justify-content-center align-items-center m-3'>
-                <button onClick={handleGoogleSignIn} className='border border-dark rounded-circle d-flex justify-content-center align-items-center p-3 '><FaGoogle /></button>
+                <button onClick={handleGoogleSignIn} className='border border-dark rounded-circle d-flex justify-content-center align-items-center p-3 '><FaGoogle style={{color:'red'}} /></button>
             </div>
             <div className='w-75 d-flex justify-content-center align-items-center'>
-                <p>Already have an account? <p onClick={() => navigate('/login')}>Login</p></p>
+                <p>Already have an account? <span onClick={() => navigate('/login')}>Login</span></p>
             </div>
 
         </div>
