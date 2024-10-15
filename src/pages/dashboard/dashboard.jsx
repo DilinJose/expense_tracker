@@ -67,15 +67,15 @@ const Dashboard = () => {
 
                 </div>
                 <div className='d-flex flex-wrap justify-content-between align-items-center'>
-                    <div style={{ backgroundColor: "#90aead", border: '1px solid #aedad5', height: "150px", borderRadius: "30px", boxShadow: "0 0 2px 2px #aedad5" }} className='flex-grow-1 mx-2 my-2' >
+                    <div style={{color:"#ffff", backgroundColor: "#1B2F33", border: '1px solid #0c171a', height: "150px", borderRadius: "30px", boxShadow: "0 0 2px 2px #d9d9d9" }} className='flex-grow-1 mx-2 my-2' >
                         <h5 className='text-center mt-3'>Income</h5>
                         <h3 className='text-center mt-4'>&#8377;{totalIncome}</h3>
                     </div>
-                    <div style={{ backgroundColor: "#90aead", border: '1px solid #aedad5', height: "150px", borderRadius: "30px", boxShadow: "0 0 2px 2px #aedad5" }} className='flex-grow-1 mx-2 my-2'>
+                    <div style={{color:"#ffff", backgroundColor: "#1B2F33", border: '1px solid #0c171a', height: "150px", borderRadius: "30px", boxShadow: "0 0 2px 2px #d9d9d9" }} className='flex-grow-1 mx-2 my-2'>
                         <h5 className='text-center mt-3'>Expense</h5>
                         <h3 className='text-center mt-4'>&#8377;{totalExpense}</h3>
                     </div>
-                    <div style={{ backgroundColor: "#90aead", border: '1px solid #aedad5', height: "150px", borderRadius: "30px", boxShadow: "0 0 2px 2px #aedad5" }} className='flex-grow-1 mx-2 my-2'>
+                    <div style={{color:"#ffff", backgroundColor: "#1B2F33", border: '1px solid #0c171a', height: "150px", borderRadius: "30px", boxShadow: "0 0 2px 2px #d9d9d9" }} className='flex-grow-1 mx-2 my-2'>
                         <h5 className='text-center mt-3'>Balance</h5>
                         <h3 className='text-center mt-4'>&#8377;{balance}</h3>
                     </div>
